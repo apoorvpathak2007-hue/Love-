@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prachi ❤️ Apoorv</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<script src="script.js" defer></script>
+</head>
+
+<body>
+
+<div id="loader">
+<h1>Prachi ❤️ Apoorv</h1>
+<p>Loading our beautiful memories...</p>
+</div>
+
+<div class="hearts"></div>
+
+<header class="hero">
+
+<nav>
+
+<h2>Prachi ❤️ Apoorv</h2>
+
+<div>
+
+<button id="themeBtn">🌙</button>
+
+</div>
+
+</nav>
+
+<div class="hero-content">
+
+<h1>Forever & Always ❤️</h1>
+
+<p>
+Every moment with you becomes a beautiful memory.
+</p>
+
+<a href="#gallery" class="btn">
+View Memories
+</a>
+
+</div>
+
+</header>
+
+<section id="counter">
+
+<h2>Together Since ❤️</h2>
+
+<div id="loveCounter"></div>
+
+</section>
+
+<section id="timeline">
+
+<h2>Our Love Story</h2>
+
+<div class="timeline">
+
+<div class="card">
+
+<h3>💖 First Meet</h3>
+
+<p>
+The beginning of our forever...
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🌹 First Smile</h3>
+
+<p>
+A smile that changed everything.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>💕 Today</h3>
+
+<p>
+Still creating beautiful memories together.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<h2>Gallery</h2>
+
+<h3>👑 My Princess</h3>
+
+<div class="gallery">
+
+<img src="assets/images/my-princess/photo1.jpg">
+
+<img src="assets/images/my-princess/photo2.jpg">
+
+</div>
+
+<h3>💕 Cute Moments</h3>
+
+<div class="gallery">
+
+<img src="assets/images/cute-moments/photo1.jpg">
+
+</div>
+
+<h3>💞 First Meet</h3>
+
+<div class="gallery empty">
+
+<p>Add your first meet photos later ❤️</p>
+
+</div>
+
+<h3>📖 Memories</h3>
+
+<div class="gallery empty">
+
+<p>Add more memories anytime ❤️</p>
+
+</div>
+
+</section>
+
+<section id="letter">
+
+<h2>Love Letter 💌</h2>
+
+<div class="letter">
+
+<p>
+
+Dear Prachi,
+
+Every heartbeat reminds me of you.
+
+Every smile begins because of you.
+
+Every dream is more beautiful with you.
+
+No matter where life takes us,
+
+I promise to always love you,
+
+care for you,
+
+and create endless memories together.
+
+❤️ Forever Yours,
+
+Apoorv
+
+</p>
+
+</div>
+
+</section>
+
+<section id="music">
+
+<h2>Our Song 🎵</h2>
+
+<audio id="player" controls>
+
+<source src="assets/music/song.mp3" type="audio/mpeg">
+
+</audio>
+
+</section>
+
+<footer>
+
+<h2>Prachi ❤️ Apoorv</h2>
+
+<p>
+
+Made with ❤️ Forever.
+
+</p>
+
+</footer>
+
+<div id="lightbox">
+
+<span id="close">&times;</span>
+
+<img id="lightboxImg">
+
+</div>
+
+</body>
+
+</html>
