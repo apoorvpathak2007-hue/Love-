@@ -1,0 +1,190 @@
+// ---------------------------
+// Loading Screen
+// ---------------------------
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+    setTimeout(() => {
+        loader.style.opacity = "0";
+        loader.style.pointerEvents = "none";
+    }, 1800);
+});
+
+// ---------------------------
+// Relationship Counter
+// Change this date to your anniversary
+// ---------------------------
+const startDate = new Date("2025-01-01");
+
+function updateCounter() {
+
+    const now = new Date();
+
+    const diff = now - startDate;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+    const years = Math.floor(days / 365);
+
+    const months = Math.floor((days % 365) / 30);
+
+    const remaining = days % 30;
+
+    document.getElementById("loveCounter").innerHTML =
+        `<h1>${years} Years ${months} Months ${remaining} Days ❤️</h1>`;
+}
+
+setInterval(updateCounter, 1000);
+
+updateCounter();
+
+
+// ---------------------------
+// Dark Mode
+// ---------------------------
+const themeBtn = document.getElementById("themeBtn");
+
+themeBtn.onclick = () => {
+
+    document.body.classList.toggle("dark");
+
+    if(document.body.classList.contains("dark")){
+
+        themeBtn.innerHTML="☀️";
+
+    }else{
+
+        themeBtn.innerHTML="🌙";
+
+    }
+
+};
+
+
+// ---------------------------
+// Lightbox
+// ---------------------------
+const images=document.querySelectorAll(".gallery img");
+
+const lightbox=document.getElementById("lightbox");
+
+const lightboxImg=document.getElementById("lightboxImg");
+
+const close=document.getElementById("close");
+
+images.forEach(img=>{
+
+img.onclick=()=>{
+
+lightbox.style.display="flex";
+
+lightboxImg.src=img.src;
+
+}
+
+});
+
+close.onclick=()=>{
+
+lightbox.style.display="none";
+
+};
+
+lightbox.onclick=(e)=>{
+
+if(e.target===lightbox){
+
+lightbox.style.display="none";
+
+}
+
+};
+
+
+// ---------------------------
+// Floating Hearts
+// ---------------------------
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.innerHTML="❤️";
+
+heart.style.position="fixed";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.top="100vh";
+
+heart.style.fontSize=(15+Math.random()*20)+"px";
+
+heart.style.opacity=Math.random();
+
+heart.style.zIndex="999";
+
+heart.style.transition="transform 8s linear, opacity 8s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+
+heart.style.transform="translateY(-120vh)";
+
+heart.style.opacity="0";
+
+},100);
+
+setTimeout(()=>{
+
+heart.remove();
+
+},8000);
+
+}
+
+setInterval(createHeart,600);
+
+
+// ---------------------------
+// Scroll Animation
+// ---------------------------
+const cards=document.querySelectorAll(".card,.gallery img,.letter");
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0px)";
+
+}
+
+});
+
+});
+
+cards.forEach(card=>{
+
+card.style.opacity="0";
+
+card.style.transform="translateY(50px)";
+
+card.style.transition="1s";
+
+observer.observe(card);
+
+});
+
+
+// ---------------------------
+// Music Auto Play (Muted until user interacts)
+// ---------------------------
+const player=document.getElementById("player");
+
+document.body.addEventListener("click",()=>{
+
+player.play().catch(()=>{});
+
+},{once:true});
